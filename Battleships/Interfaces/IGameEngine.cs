@@ -1,0 +1,3 @@
+interface IGameEngine {
+    void Run();
+}
