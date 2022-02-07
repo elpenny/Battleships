@@ -1,21 +1,24 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Welcome to BATTLESHIPS!");
-Console.WriteLine("Press 's' to start the game or 'x' to exit.");
+Console.WriteLine(GameCaptions.Welcome);
+Console.WriteLine(GameCaptions.StartOrExit);
 
 var loop = true;
 while(loop) {
     var pressedKey = Console.ReadKey(true).KeyChar;
     switch(pressedKey) {
         case 's':
-            Console.WriteLine("Starting game...");
-            loop = false;
+            Console.WriteLine(GameCaptions.StartingGame);
+            IGameEngine engine = new ConsoleGameEngine();
+            engine.Run();
+            Console.WriteLine(GameCaptions.StartOrExit);
             break;
         case 'x':
-            Console.WriteLine("Exiting...");
+            Console.WriteLine(GameCaptions.ExitingGame);
+            loop = false;
             Environment.Exit(0);
             break;
         default:
-            Console.WriteLine("Invalid key pressed. Please try again...");
+            Console.WriteLine(GameCaptions.InvalidKey);
             break;
     }
 }
