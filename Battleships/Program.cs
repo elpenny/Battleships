@@ -15,7 +15,7 @@ while(loop) {
             Environment.Exit(0);
             break;
         default:
-            Console.WriteLine("Invalid key pressed.");
+            Console.WriteLine("Invalid key pressed. Please try again...");
             break;
     }
 }
