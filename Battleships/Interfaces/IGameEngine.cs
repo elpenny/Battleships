@@ -1,3 +1,5 @@
-interface IGameEngine {
+interface IGameEngine 
+{
     void Run();
+    void Render();
 }
