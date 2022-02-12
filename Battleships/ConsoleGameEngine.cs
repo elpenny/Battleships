@@ -10,9 +10,4 @@ public class ConsoleGameEngine : IGameEngine
         Console.WriteLine(GameCaptions.InitializingGame);
         this._renderer.Render();
     }
-
-    public void Render()
-    {
-        this._renderer.Render();
-    }
 }
